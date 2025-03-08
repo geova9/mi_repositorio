@@ -29,8 +29,13 @@ class B {
         System.out.println("Bono: " + bono);
     }
 }
-
+/**
+ * Clase Saludar, verifica si es mayor de edad y devuelve un saludo especifíco
+ */
 class Saludo {
+    /**
+     * @param persona1 que es un objeto de tipo Persona
+     */
     void imprimirSaludo(Persona persona1) {
         if (persona1.edad < 18) {
             System.out.println("Hola, joven " + persona1.getNombre());
@@ -39,8 +44,12 @@ class Saludo {
         }
     }
 }
+/**
+ * Clase de prueba para ejecutar el programa
+ */
 
 public class Main {
+
     public static void main(String[] args) {
         A.datos("Juan Perez", 45, 50000);
         A.mostrar();
