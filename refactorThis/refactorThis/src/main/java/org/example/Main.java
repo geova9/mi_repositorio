@@ -6,7 +6,12 @@ class Persona {
     private String nombre = "SinNombre";
     private int edad = 0;
     private double salario = 0.0;
-
+/**
+ * Constructor de la clase Persona
+ * @param nombre Nombre de la persona
+ * @param edad Edad de la persona
+ * @param salario Salario de la persona
+ */
     public void datos(String n, int e, double s) {
         this.nombre = n;
         this.edad = e;
@@ -14,7 +19,7 @@ class Persona {
     }
 
 
-    
+   //Metodos Getters and Setters 
 
     public String getNombre() {
         return nombre;
@@ -41,7 +46,9 @@ class Persona {
     }
 
 
-
+/**
+ * Muestra todos los datos de la persona
+ */
 
     public void mostrar() {
         System.out.println("Nombre: " + nombre);
@@ -49,6 +56,11 @@ class Persona {
         System.out.println("Salario: " + salario);
     }
 }
+/**
+ * Calcula el bono basado en la edad del persona
+ * @param persona1 Objeto de tipo Persona
+ * @return Monto del bono
+ */
 
 class Bono {
    public double calcularBono(Persona persona1) {
