@@ -1,0 +1,22 @@
+
+
+#archivos de java
+*.class
+*.jar
+*.war
+*.ear
+/target/
+/bin/
+# Archivos de entorno de desarrollo
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+nbproject/
+
+# directorios que se pueden ignorar
+*.log
+*.tmp
+*.bak
+*.swp
