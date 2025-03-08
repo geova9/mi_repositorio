@@ -1,17 +1,19 @@
 package org.example;
-
+/**
+ * Clase Persona con sus atributos de nombre,salario y edad
+ */
 class Persona {
-    static String nombre = "SinNombre";
-    static int edad = 0;
-    static double salario = 0.0;
+    private String nombre = "SinNombre";
+    private int edad = 0;
+    private double salario = 0.0;
 
-    static void datos(String n, int e, double s) {
-        nombre = n;
-        edad = e;
-        salario = s;
+    public void datos(String n, int e, double s) {
+        this.nombre = n;
+        this.edad = e;
+        this.salario = s;
     }
 
-    static void mostrar() {
+    public void mostrar() {
         System.out.println("Nombre: " + nombre);
         System.out.println("Edad: " + edad);
         System.out.println("Salario: " + salario);
