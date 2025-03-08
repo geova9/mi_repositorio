@@ -30,12 +30,12 @@ class B {
     }
 }
 
-class C {
-    void imprimirSaludo() {
-        if (A.edad < 18) {
-            System.out.println("Hola, joven " + A.nombre);
+class Saludo {
+    void imprimirSaludo(Persona persona1) {
+        if (persona1.edad < 18) {
+            System.out.println("Hola, joven " + persona1.getNombre());
         } else {
-            System.out.println("Hola, señor/a " + A.nombre);
+            System.out.println("Hola, señor/a " + persona1.getNombre());
         }
     }
 }
