@@ -1,34 +1,79 @@
 package org.example;
-
-class A {
-    static String nombre = "SinNombre";
-    static int edad = 0;
-    static double salario = 0.0;
-
-    static void datos(String n, int e, double s) {
-        nombre = n;
-        edad = e;
-        salario = s;
+/**
+ * Clase Persona con sus atributos de nombre,salario y edad
+ */
+class Persona {
+    private String nombre = "SinNombre";
+    private int edad = 0;
+    private double salario = 0.0;
+/**
+ * Constructor de la clase Persona
+ * @param nombre Nombre de la persona
+ * @param edad Edad de la persona
+ * @param salario Salario de la persona
+ */
+    public void datos(String n, int e, double s) {
+        this.nombre = n;
+        this.edad = e;
+        this.salario = s;
     }
 
-    static void mostrar() {
+
+   //Metodos Getters and Setters 
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+
+/**
+ * Muestra todos los datos de la persona
+ */
+
+    public void mostrar() {
         System.out.println("Nombre: " + nombre);
         System.out.println("Edad: " + edad);
         System.out.println("Salario: " + salario);
     }
 }
+/**
+ * Calcula el bono basado en la edad del persona
+ * @param persona1 Objeto de tipo Persona
+ * @return Monto del bono
+ */
 
-class B {
-    void calcularBono() {
+class Bono {
+   public double calcularBono(Persona persona1) {
         double bono = 0;
-        if (A.edad > 50) {
-            bono = A.salario * 0.10;
+        if (persona1.getEdad() > 50) {
+            bono = persona1.getSalario() * 0.10;
         } else {
-            bono = A.salario * 0.05;
+            bono = persona1.getSalario() * 0.05;
         }
-        System.out.println("Bono: " + bono);
+        return bono;
     }
 }
+
 /**
  * Clase Saludar, verifica si es mayor de edad y devuelve un saludo especifíco
  */
@@ -40,9 +85,9 @@ class Saludo {
         if (persona1.edad < 18) {
             System.out.println("Hola, joven " + persona1.getNombre());
         } else {
-            System.out.println("Hola, señor/a " + persona1.getNombre());
-        }
-    }
+            System.out.println("Hola, señor/a " + persona1.getNombre();
+}
+}
 }
 /**
  * Clase de prueba para ejecutar el programa
@@ -51,6 +96,7 @@ class Saludo {
 public class Main {
 
     public static void main(String[] args) {
+
         Persona persona2=new Persona("Juan Perez", 45, 50000);
         persona2.mostrar();
     
@@ -58,5 +104,6 @@ public class Main {
         System.out.println("Bono: "+bono.calcularBono(persona2));
         Saludar saludo = new Saludar();
         saludo.imprimirSaludo(persona2);
+
     }
 }
