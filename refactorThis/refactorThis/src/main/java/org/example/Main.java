@@ -13,6 +13,36 @@ class Persona {
         this.salario = s;
     }
 
+
+    
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+
+
+
     public void mostrar() {
         System.out.println("Nombre: " + nombre);
         System.out.println("Edad: " + edad);
@@ -20,15 +50,15 @@ class Persona {
     }
 }
 
-class B {
-    void calcularBono() {
+class Bono {
+   public double calcularBono(Persona persona1) {
         double bono = 0;
-        if (Persona.edad > 50) {
-            bono = Persona.salario * 0.10;
+        if (persona1.getEdad() > 50) {
+            bono = persona1.getSalario() * 0.10;
         } else {
-            bono = Persona.salario * 0.05;
+            bono = persona1.getSalario() * 0.05;
         }
-        System.out.println("Bono: " + bono);
+        return bono;
     }
 }
 
