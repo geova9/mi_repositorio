@@ -51,11 +51,12 @@ class Saludo {
 public class Main {
 
     public static void main(String[] args) {
-        A.datos("Juan Perez", 45, 50000);
-        A.mostrar();
-        B b = new B();
-        b.calcularBono();
-        C c = new C();
-        c.imprimirSaludo();
+        Persona persona2=new Persona("Juan Perez", 45, 50000);
+        persona2.mostrar();
+    
+        Bono bono = new Bono();
+        System.out.println("Bono: "+bono.calcularBono(persona2));
+        Saludar saludo = new Saludar();
+        saludo.imprimirSaludo(persona2);
     }
 }
