@@ -1,6 +1,6 @@
 package org.example;
 
-class A {
+class Persona {
     static String nombre = "SinNombre";
     static int edad = 0;
     static double salario = 0.0;
@@ -21,10 +21,10 @@ class A {
 class B {
     void calcularBono() {
         double bono = 0;
-        if (A.edad > 50) {
-            bono = A.salario * 0.10;
+        if (Persona.edad > 50) {
+            bono = Persona.salario * 0.10;
         } else {
-            bono = A.salario * 0.05;
+            bono = Persona.salario * 0.05;
         }
         System.out.println("Bono: " + bono);
     }
@@ -32,7 +32,7 @@ class B {
 
 class C {
     void imprimirSaludo() {
-        if (A.edad < 18) {
+        if (Persona.edad < 18) {
             System.out.println("Hola, joven " + A.nombre);
         } else {
             System.out.println("Hola, señor/a " + A.nombre);
@@ -42,8 +42,8 @@ class C {
 
 public class Main {
     public static void main(String[] args) {
-        A.datos("Juan Perez", 45, 50000);
-        A.mostrar();
+        Persona.datos("Juan Perez", 45, 50000);
+        Persona.mostrar();
         B b = new B();
         b.calcularBono();
         C c = new C();
