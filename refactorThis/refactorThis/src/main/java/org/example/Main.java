@@ -3,9 +3,9 @@ package org.example;
  * Clase Persona con sus atributos de nombre,salario y edad
  */
 class Persona {
-    private String nombre = "SinNombre";
-    private int edad = 0;
-    private double salario = 0.0;
+    private String nombre;
+    private int edad;
+    private double salario;
 /**
  * Constructor de la clase Persona
  * @param nombre Nombre de la persona
