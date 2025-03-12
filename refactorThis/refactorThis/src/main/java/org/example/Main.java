@@ -12,10 +12,10 @@ class Persona {
  * @param edad Edad de la persona
  * @param salario Salario de la persona
  */
-    public void datos(String n, int e, double s) {
-        this.nombre = n;
-        this.edad = e;
-        this.salario = s;
+public Persona(String nombre, int edad, double salario) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.salario = salario;
     }
 
 
@@ -82,10 +82,10 @@ class Saludo {
      * @param persona1 que es un objeto de tipo Persona
      */
     void imprimirSaludo(Persona persona1) {
-        if (persona1.edad < 18) {
+        if (persona1.getEdad() < 18) {
             System.out.println("Hola, joven " + persona1.getNombre());
         } else {
-            System.out.println("Hola, señor/a " + persona1.getNombre();
+            System.out.println("Hola, señor/a " + persona1.getNombre());
 }
 }
 }
@@ -97,12 +97,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Persona persona2=new Persona("Juan Perez", 45, 50000);
+        Persona persona2=new Persona("Juan Perez", 45, 50000.34);
         persona2.mostrar();
     
         Bono bono = new Bono();
         System.out.println("Bono: "+bono.calcularBono(persona2));
-        Saludar saludo = new Saludar();
+        Saludo saludo = new Saludo();
         saludo.imprimirSaludo(persona2);
 
     }
